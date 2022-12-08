@@ -129,7 +129,7 @@
     }
 
     function changeDisplay(resp) {
-        let canvas = document.getElementById("circles");
+        let canvas = document.getElementById("canvas");
         let ctx = canvas.getContext('2d');
         let [lat, lon, temp, feelsLike, windSpeed, hum] = parseWeather(resp);
 
