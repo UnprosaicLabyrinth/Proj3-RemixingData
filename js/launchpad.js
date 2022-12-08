@@ -49,14 +49,6 @@ function handleInput(input) {
 function noteOn(note) {
     console.log(`${note}`);
     colorLED(note, 53);
-    // document.body.style.backgroundColor = "Red";
-    // document.getElementById("hello_tag").style.textAlign = "center";
-    // document.getElementById("hello_tag").style.backgroundColor = "black";
-    // document.getElementById("hello_tag").style.color = "yellow";
-    // document.getElementById('hello_tag').textContent = "From: note: " + note;
-    // colorM(note, 68);
-    // colorM(note+1, 104);
-    // colorM(note+2, 104);
     if (note >= 84 && note <= 99) {
         let index = note - 84;
         let lat = ((Math.floor(index / 4) + 1) * 22.5) - (22.5 * Math.random())
@@ -81,12 +73,7 @@ function noteOn(note) {
 }
 
 function noteOff(note) {
-    //console.log(`note: ${note} OFF`);
-    // document.body.style.backgroundColor = "GhostWhite";
-    // document.getElementById("hello_tag").style.textAlign = "left";
-    // document.getElementById("hello_tag").style.backgroundColor = document.body.style.backgroundColor;
-    // document.getElementById("hello_tag").style.color = "black";
-    // document.getElementById('hello_tag').textContent = "Hello, World!";
+    // nothing to do
 }
 
 function colorLED(key, color) {
@@ -96,6 +83,6 @@ function colorLED(key, color) {
 window.addEventListener('resize', resizeCanvas(), false);
 
 function resizeCanvas() {
-    document.getElementById("circles").height = window.outerHeight;
-    document.getElementById("circles").width = window.innerWidth;
+    document.getElementById("canvas").height = window.innerHeight;
+    document.getElementById("canvas").width = window.innerWidth;
 }
